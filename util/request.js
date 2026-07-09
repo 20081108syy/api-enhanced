@@ -184,7 +184,7 @@ const createRequest = (uri, data, options) => {
   return new Promise((resolve, reject) => {
     // 变量声明和初始化
     const headers = options.headers ? { ...options.headers } : {}
-    const ip = options.realIP || options.ip || '113.57.190.101'
+    const ip = options.realIP || options.ip || '180.137.48.129'
 
     // IP头设置
     if (ip) {
