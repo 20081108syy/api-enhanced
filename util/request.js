@@ -184,12 +184,12 @@ const createRequest = (uri, data, options) => {
   return new Promise((resolve, reject) => {
     // 变量声明和初始化
     const headers = options.headers ? { ...options.headers } : {}
-    const ip = '211.161.244.70'
+    const ip = options.realIP || options.ip || '211.161.244.70'
 
     // IP头设置
     if (ip) {
-      headers['X-Real-IP'] = ip
-      headers['X-Forwarded-For'] = ip
+      headers['X-Real-IP'] = '211.161.244.70'
+      headers['X-Forwarded-For'] = '211.161.244.70'
     }
 
     let cookie = options.cookie || {}
